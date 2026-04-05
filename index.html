@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WVSPEC Precision Technology — Advanced optical metrology instruments. Delivering nanometer-scale precision at industrial scale." />
+  <title>WVSPEC Precision Technology | Leading Optical Metrology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WVSPEC Precision Technology",
+    "url": "https://wvspec.com",
+    "logo": "assets/logo.png",
+    "slogan": "We Challenge Therefore We Are"
+  }
+  </script>
+</head>
+<body class="enterprise-layout">
+
+  <!-- Header / Navigation -->
+  <header class="main-header">
+    <div class="nav-container">
+      <div class="brand">
+        <img src="assets/logo.png" alt="WVSPEC Logo" class="nav-logo" />
+      </div>
+      <nav class="enterprise-nav">
+        <ul class="nav-menu">
+          <li><button class="nav-btn active" data-view="home">Home</button></li>
+          <li><button class="nav-btn" data-view="solutions">Solutions</button></li>
+          <li><button class="nav-btn" data-view="technology">Technology</button></li>
+          <li><button class="nav-btn" data-view="contact">Contact</button></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-fast-contact" id="quick-inquiry-btn">Quick Inquiry</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Viewport Content (SPA) -->
+  <main class="view-viewer" id="main-view-container">
+    
+    <!-- View: Home -->
+    <section class="view active" id="view-home">
+      <div class="hero-minimal">
+        <div class="hero-content">
+          <span class="view-tag">Precision Optical Metrology</span>
+          <h1 class="hero-slogan">We Challenge<br/><span class="accent">Therefore We Are</span></h1>
+          <div class="hero-intro-box">
+            <p class="hero-intro">
+               WVSPEC Precision Technology transforms optical theory into nanometer-scale reality. Since our inception, we have been dedicated to finding smart ways of using technology to build a better tomorrow through precision measurement.
+            </p>
+            <p class="hero-detail">Our core mission is to provide industry-leading instruments that enable next-generation semiconductor and material research.</p>
+          </div>
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="app.switchView('solutions')">Explore Solutions</button>
+            <button class="btn-outline" onclick="app.switchView('contact')">Partner with Us</button>
+          </div>
+        </div>
+        <div class="hero-feature-img">
+          <div class="img-frame">
+            <img src="assets/hero_bg.jpg" alt="Precision Metrology Background" />
+            <div class="img-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- View: Solutions -->
+    <section class="view" id="view-solutions">
+      <div class="solutions-layout">
+        <div class="section-heading">
+          <span class="view-tag">Core Capabilities</span>
+          <h2 class="view-title">Industrial Solutions</h2>
+          <p class="section-sub">Smart solutions are at the core of all that we do at WVSPEC. We specialize in non-contact, high-speed metrology for the electronics and semiconductor sectors.</p>
+        </div>
+        <div class="solutions-grid">
+          <div class="sol-module" id="sol-surface">
+            <img src="assets/thickness_range_3d.jpg" alt="Surface Profile" />
+            <div class="sol-module-content">
+              <h3>Surface Profile</h3>
+              <p>Non-contact 3D surface topography with sub-nanometer resolution using advanced interferometry.</p>
+              <span class="sol-spec">±0.015 μm Range</span>
+            </div>
+          </div>
+          <div class="sol-module" id="sol-film">
+            <img src="assets/avg_thickness_wafer.png" alt="Film Thickness" />
+            <div class="sol-module-content">
+              <h3>Film Thickness</h3>
+              <p>Real-time spectral analysis for transparent multi-layer films on varied substrates.</p>
+              <span class="sol-spec">Average 15.690 μm</span>
+            </div>
+          </div>
+          <div class="sol-module" id="sol-material">
+            <img src="assets/wafer_bumping_3d.jpg" alt="Analytic Material" />
+            <div class="sol-module-content">
+              <h3>Analytic Material</h3>
+              <p>Automated material classification and wafer-level defect mapping using AI algorithms.</p>
+              <span class="sol-spec">Deep Learning Integration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- View: Technology -->
+    <section class="view" id="view-technology">
+      <div class="tech-layout-pro">
+        <div class="tech-header-dual">
+          <div class="tech-header-text">
+            <span class="view-tag">System & Logic</span>
+            <h2 class="view-title">Precision Systems</h2>
+            <p>Our technology stack integrates state-of-the-art optical hardware with deep-learning analytics to output actionable engineering data.</p>
+          </div>
+        </div>
+        
+        <div class="tech-main-grid">
+          <!-- Hardware/System Modules -->
+          <div class="tech-column">
+            <h4 class="sub-column-title">System Architecture</h4>
+            <div class="tech-tabs-vertical">
+              <button class="tech-v-tab active" data-tech="module1" data-cat="system">
+                <strong>Module Alpha</strong>
+                <span>Optical Integration Stage</span>
+              </button>
+              <button class="tech-v-tab" data-tech="module2" data-cat="system">
+                <strong>Sensor Core Beta</strong>
+                <span>Wide-Spectrum Analyzer</span>
+              </button>
+              <button class="tech-v-tab" data-tech="module3" data-cat="system">
+                <strong>Array Delta</strong>
+                <span>Multipoint Defect Cluster</span>
+              </button>
+            </div>
+            <div class="tech-display-frame">
+              <img src="assets/module_1.jpg" id="tech-system-display" alt="Hardware Display" />
+            </div>
+          </div>
+
+          <!-- Result/Analysis Analytics -->
+          <div class="tech-column">
+            <h4 class="sub-column-title">Result Analytics</h4>
+            <div class="tech-tabs-vertical">
+              <button class="tech-v-tab active" data-tech="wafer_chart" data-cat="analysis">
+                <strong>Wafer Mapping</strong>
+                <span>Film Thickness Visualization</span>
+              </button>
+              <button class="tech-v-tab" data-tech="surface_heatmap" data-cat="analysis">
+                <strong>Surface Heatmap</strong>
+                <span>3D Profile Non-uniformity</span>
+              </button>
+              <button class="tech-v-tab" data-tech="spectral_data" data-cat="analysis">
+                <strong>Spectral Data</strong>
+                <span>Signal Processing Output</span>
+              </button>
+            </div>
+            <div class="tech-display-frame analysis">
+              <img src="assets/film_diagram.png" id="tech-analysis-display" alt="Analytics Display" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- View: Contact -->
+    <section class="view" id="view-contact">
+      <div class="contact-layout">
+        <div class="contact-header">
+          <span class="view-tag">Collaborate</span>
+          <h2 class="view-title">Connect with Experts</h2>
+          <p>Get in touch to set up a meeting with one of our technical representatives for a custom solution.</p>
+        </div>
+        <div class="contact-container">
+          <div class="contact-info-panel">
+            <div class="contact-card">
+              <h4>Direct Channel</h4>
+              <p>For urgent technical support or complex requirement analysis:</p>
+              <a href="mailto:msu@wvspec.com" class="contact-link">msu@wvspec.com</a>
+            </div>
+            <div class="contact-status-box">
+              <span class="status-indicator"></span>
+              <span>Available for Technical Consultations (GMT+8).</span>
+            </div>
+          </div>
+          <div class="contact-form-panel">
+            <form id="pro-contact-form" class="clean-form">
+              <div class="form-row">
+                <input type="text" name="name" placeholder="Full Name" required />
+                <input type="email" name="email" placeholder="Business Email" required />
+              </div>
+              <textarea name="message" rows="5" placeholder="Could you describe your measurement challenges or project requirements?" required></textarea>
+              <button type="submit" class="btn-submit-pro">Submit Inquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Sticky Feedback Area -->
+  <aside class="sticky-cta">
+    <div id="chat-window" class="chat-window">
+      <div class="chat-header">
+        <div class="chat-status"></div>
+        <span>WVSPEC Technical Support</span>
+        <button id="close-chat">×</button>
+      </div>
+      <div class="chat-body" id="chat-messages">
+        <div class="chat-msg bot">How can we assist with your precision metrology needs?</div>
+      </div>
+      <div class="chat-footer">
+        <input type="text" id="chat-input" placeholder="Type a message..." />
+        <button id="send-chat">Send</button>
+      </div>
+    </div>
+    <button class="btn-chat-toggle" id="fab-chat" title="Chat with us">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    </button>
+  </aside>
+
+  <!-- Quick Inquiry Flyout -->
+  <div id="inquiry-flyout" class="flyout">
+    <div class="flyout-header">
+      <h3>Quick Contact</h3>
+      <button id="close-flyout">×</button>
+    </div>
+    <div class="flyout-body">
+      <p>Need a fast technical answer?</p>
+      <input type="email" id="quick-email" placeholder="Email Address" />
+      <button id="quick-submit">Send Message</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
