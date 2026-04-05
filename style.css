@@ -25,13 +25,17 @@
 
 /* Base & Reset */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { overflow-x: hidden; height: 100%; }
+html, body { 
+  overflow: hidden; 
+  height: 100vh; 
+  width: 100vw;
+  margin: 0;
+}
 body {
   font-family: var(--font-body);
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.5;
-  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -91,6 +95,7 @@ body {
   flex: 1;
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 .view {
   position: absolute;
@@ -99,12 +104,13 @@ body {
   visibility: hidden;
   transform: translateY(15px);
   transition: transform var(--transition), opacity var(--transition);
-  padding: 80px 0;
+  padding: 40px 0;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-y: auto;
+  overflow-y: auto; /* Only show internal scrollbar if content exceeds viewport */
+  -webkit-overflow-scrolling: touch;
 }
 .view.active {
   opacity: 1;
