@@ -22,6 +22,7 @@ const app = (() => {
         handleInitialView();
         setupQuickInquiry();
         setupChat();
+        initCarousels();
         
         // Final Pro Audit (Automatic)
         runProAudit();
@@ -76,14 +77,14 @@ const app = (() => {
         const analysisImg = document.getElementById('tech-analysis-display');
 
         const techData = {
-            // System Category
-            'module1': { src: 'assets/module_1.jpg', cat: 'system' },
-            'module2': { src: 'assets/module_2.jpg', cat: 'system' },
-            'module3': { src: 'assets/module_3.png', cat: 'system' },
-            // Analysis Category (Technical Plots)
-            'wafer_chart': { src: 'assets/avg_thickness_wafer.png', cat: 'analysis' },
-            'surface_heatmap': { src: 'assets/thickness_range_3d.jpg', cat: 'analysis' },
-            'spectral_data': { src: 'assets/wafer_bumping_3d.jpg', cat: 'analysis' } 
+            // System Category — actual product/setup images from WVSPEC site
+            'surface_profile': { src: 'assets/surface_profile.png', cat: 'system' },
+            'film_dm1':        { src: 'assets/film_dm1.png',        cat: 'system' },
+            'film_dm2':        { src: 'assets/film_dm2.png',        cat: 'system' },
+            // Analysis Category — actual result/output images from WVSPEC site
+            'avg_thickness':     { src: 'assets/avg_thickness_wafer.png', cat: 'analysis' },
+            'heat_map':          { src: 'assets/heat_map.jpg',            cat: 'analysis' },
+            'analytic_material': { src: 'assets/analytic_material.png',   cat: 'analysis' }
         };
 
         tabs.forEach(tab => {
@@ -245,7 +246,60 @@ const app = (() => {
         console.groupEnd();
     };
 
-    return { init, switchView };
+    const showFilmDetail = () => {
+        document.getElementById('modal-film').classList.add('open');
+    };
+
+    const showAnalyticDetail = () => {
+        document.getElementById('modal-analytic').classList.add('open');
+    };
+
+    const showSurfaceDetail = () => {
+        document.getElementById('modal-surface').classList.add('open');
+    };
+
+    // ---- SOLUTION CAROUSELS ----
+    const initCarousels = () => {
+        document.querySelectorAll('.sol-carousel').forEach(carousel => {
+            const track = carousel.querySelector('.sol-carousel-track');
+            const slides = carousel.querySelectorAll('.sol-carousel-slide');
+            const dotsContainer = carousel.querySelector('.sol-dots');
+            const prevBtn = carousel.querySelector('.sol-arrow.prev');
+            const nextBtn = carousel.querySelector('.sol-arrow.next');
+            if (!track || slides.length === 0) return;
+
+            let current = 0;
+            const total = slides.length;
+
+            // Build dot indicators
+            slides.forEach((_, i) => {
+                const dot = document.createElement('button');
+                dot.className = 'sol-dot' + (i === 0 ? ' active' : '');
+                dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                dot.addEventListener('click', () => goTo(i));
+                dotsContainer.appendChild(dot);
+            });
+
+            const dots = () => dotsContainer.querySelectorAll('.sol-dot');
+
+            const goTo = (index) => {
+                current = (index + total) % total;
+                track.style.transform = `translateX(-${current * 100}%)`;
+                dots().forEach((d, i) => d.classList.toggle('active', i === current));
+            };
+
+            prevBtn.addEventListener('click', () => goTo(current - 1));
+            nextBtn.addEventListener('click', () => goTo(current + 1));
+
+            // Hide arrows when only one slide
+            if (total <= 1) {
+                prevBtn.style.display = 'none';
+                nextBtn.style.display = 'none';
+            }
+        });
+    };
+
+    return { init, switchView, showFilmDetail, showAnalyticDetail, showSurfaceDetail };
 })();
 
 app.init();
