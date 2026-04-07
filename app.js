@@ -77,14 +77,14 @@ const app = (() => {
         const analysisImg = document.getElementById('tech-analysis-display');
 
         const techData = {
-            // System Category — actual product/setup images from WVSPEC site
-            'surface_profile': { src: 'assets/surface_profile.png', cat: 'system' },
-            'film_dm1':        { src: 'assets/film_dm1.png',        cat: 'system' },
-            'film_dm2':        { src: 'assets/film_dm2.png',        cat: 'system' },
-            // Analysis Category — actual result/output images from WVSPEC site
+            // System Category — using available assets on Vercel
+            'surface_profile': { src: 'assets/surface_3d.jpg',           cat: 'system' },
+            'film_dm1':        { src: 'assets/film_diagram.png',          cat: 'system' },
+            'film_dm2':        { src: 'assets/avg_thickness_wafer.png',   cat: 'system' },
+            // Analysis Category
             'avg_thickness':     { src: 'assets/avg_thickness_wafer.png', cat: 'analysis' },
             'heat_map':          { src: 'assets/heat_map.jpg',            cat: 'analysis' },
-            'analytic_material': { src: 'assets/analytic_material.png',   cat: 'analysis' }
+            'analytic_material': { src: 'assets/material_chart.png',      cat: 'analysis' }
         };
 
         tabs.forEach(tab => {

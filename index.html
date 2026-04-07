@@ -66,7 +66,6 @@
           <div class="img-frame">
             <img src="assets/hero_bg.jpg" alt="Precision Metrology Background" />
             <div class="img-overlay"></div>
-            <img src="assets/hero_product.png" alt="WVSPEC Precision Instrument" class="hero-product-overlay" />
           </div>
         </div>
       </div>
@@ -78,7 +77,7 @@
 
         <!-- Banner -->
         <div class="sol-banner">
-          <img src="assets/solutions_banner.png" alt="WVSPEC Solutions Banner" />
+          <img src="assets/hero_bg.jpg" alt="WVSPEC Solutions" style="object-position:center 30%;" />
         </div>
 
         <!-- Intro -->
@@ -94,7 +93,6 @@
           <!-- 01 Surface Profile -->
           <div class="sol-section">
             <div class="sol-section-text">
-              <div class="sol-big-num">01</div>
               <h3>Surface Profile</h3>
               <p>We focus on surface analysis of the finest roughness from 1 nm to tens nm. Our algorithm deals with the off-axis interference data to sub-nano resolution. With optical profiling technology, no-contact, accurate and real-time surface measurement on highly polished material is achieved.</p>
               <a href="#" class="sol-link" onclick="app.showSurfaceDetail(); return false;">View More ›</a>
@@ -102,7 +100,6 @@
             <div class="sol-section-imgs">
               <div class="sol-carousel" data-carousel="surface">
                 <div class="sol-carousel-track">
-                  <div class="sol-carousel-slide"><img src="assets/surface_profile.png" alt="Surface Profile — instrument output" /></div>
                   <div class="sol-carousel-slide"><img src="assets/surface_3d.jpg" alt="Surface Profile — 3D topography map" /></div>
                 </div>
                 <button class="sol-arrow prev" aria-label="Previous image">&#8592;</button>
@@ -115,7 +112,6 @@
           <!-- 02 Transparent Film Thickness -->
           <div class="sol-section reverse">
             <div class="sol-section-text">
-              <div class="sol-big-num">02</div>
               <h3>Transparent Film Thickness</h3>
               <p>We take advantage of spectral reflectance to help customers to control their manufacturing process. Based on plenty industrial experience, we provide consultancy service to choose the most propriate solution for <a href="#" onclick="return false;" style="color:var(--color-cyan);text-decoration:none;">transparent</a> and <a href="#" onclick="return false;" style="color:#8b5cf6;text-decoration:none;">matted</a> thin film inline measurement.</p>
               <a href="#" class="sol-link" onclick="app.showFilmDetail(); return false;">View More ›</a>
@@ -123,7 +119,6 @@
             <div class="sol-section-imgs">
               <div class="sol-carousel" data-carousel="film">
                 <div class="sol-carousel-track">
-                  <div class="sol-carousel-slide"><img src="assets/film_thickness_1.png" alt="Film Thickness — spectral reflectance setup" /></div>
                   <div class="sol-carousel-slide"><img src="assets/film_diagram.png" alt="Film Thickness — measurement diagram" /></div>
                   <div class="sol-carousel-slide"><img src="assets/avg_thickness_wafer.png" alt="Film Thickness — wafer thickness map" /></div>
                   <div class="sol-carousel-slide"><img src="assets/thickness_range_3d.jpg" alt="Film Thickness — 3D thickness range" /></div>
@@ -138,7 +133,6 @@
           <!-- 03 Analytic Material -->
           <div class="sol-section">
             <div class="sol-section-text">
-              <div class="sol-big-num">03</div>
               <h3>Analytic Material</h3>
               <p>By spectroscopy, we could perform qualitative and quantitative analysis of target materials, especially for absorption/matted materials. We also use deep learning technology to build inference platform for specific applications (e.g. outer/inner properties, defect, tomography) from our customers.</p>
               <a href="#" class="sol-link" onclick="app.showAnalyticDetail(); return false;">View More ›</a>
@@ -146,9 +140,8 @@
             <div class="sol-section-imgs">
               <div class="sol-carousel" data-carousel="analytic">
                 <div class="sol-carousel-track">
-                  <div class="sol-carousel-slide"><img src="assets/analytic_material.png" alt="Analytic Material — spectroscopy output" /></div>
                   <div class="sol-carousel-slide"><img src="assets/heat_map.jpg" alt="Analytic Material — surface heat map" /></div>
-                  <div class="sol-carousel-slide"><img src="assets/material_chart.png" alt="Analytic Material — material analysis chart" /></div>
+                  <div class="sol-carousel-slide"><img src="assets/material_chart.png" alt="Analytic Material — spectral analysis chart" /></div>
                 </div>
                 <button class="sol-arrow prev" aria-label="Previous image">&#8592;</button>
                 <button class="sol-arrow next" aria-label="Next image">&#8594;</button>
@@ -191,7 +184,7 @@
               </button>
             </div>
             <div class="tech-display-frame">
-              <img src="assets/surface_profile.png" id="tech-system-display" alt="Hardware Display" />
+              <img src="assets/surface_3d.jpg" id="tech-system-display" alt="Hardware Display" />
             </div>
           </div>
 
@@ -303,12 +296,12 @@
       </div>
       <div class="modal-imgs two-col">
         <figure>
-          <img src="assets/surface_profile.png" alt="Surface Profile — WVSPEC instrument output" />
-          <figcaption>Instrument output: surface roughness map</figcaption>
+          <img src="assets/surface_3d.jpg" alt="Surface Profile — 3D topography visualization" />
+          <figcaption>3D surface topography map</figcaption>
         </figure>
         <figure>
-          <img src="assets/surface_3d.jpg" alt="Surface Profile — 3D topography visualization" />
-          <figcaption>3D topography visualization</figcaption>
+          <img src="assets/heat_map.jpg" alt="Surface Profile — heat map analysis" />
+          <figcaption>Surface roughness heat map</figcaption>
         </figure>
       </div>
     </div>
@@ -328,11 +321,11 @@
       </div>
       <div class="modal-imgs two-col">
         <figure>
-          <img src="assets/film_dm1.png" alt="Film Thickness — DM measurement setup" />
-          <figcaption>DM measurement setup</figcaption>
+          <img src="assets/film_diagram.png" alt="Film Thickness — measurement diagram" />
+          <figcaption>Spectral reflectance measurement diagram</figcaption>
         </figure>
         <figure>
-          <img src="assets/film_dm2.png" alt="Film Thickness — full wafer thickness distribution" />
+          <img src="assets/avg_thickness_wafer.png" alt="Film Thickness — wafer thickness map" />
           <figcaption>Full wafer thickness distribution map</figcaption>
         </figure>
       </div>
