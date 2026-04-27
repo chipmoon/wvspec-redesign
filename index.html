@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="WVSPEC Precision Technology — Advanced optical metrology instruments. Delivering nanometer-scale precision at industrial scale." />
-  <meta name="keywords" content="optical metrology, surface profiling, film thickness measurement, spectral reflectance, precision instruments, semiconductor inspection, WVSPEC" />
+  <meta name="description" content="WVSPEC Precision Technology — Advanced optical metrology instruments. Delivering nanometer-scale precision at industrial scale since 2021." />
+  <meta name="keywords" content="optical metrology, surface profiling, film thickness measurement, spectral reflectance, precision instruments, semiconductor inspection, WVSPEC, tech transfer" />
   <meta name="robots" content="index, follow" />
-  <!-- Google Search Console: Replace YOUR_GSC_CODE with the token from Google Search Console -->
   <meta name="google-site-verification" content="YOUR_GSC_CODE" />
   <link rel="canonical" href="https://wvspec-redesign.pages.dev/" />
-  <!-- Open Graph (improves appearance in search results) -->
   <meta property="og:title" content="WVSPEC Precision Technology | Leading Optical Metrology" />
   <meta property="og:description" content="Advanced optical metrology instruments. Delivering nanometer-scale precision at industrial scale." />
   <meta property="og:url" content="https://wvspec-redesign.pages.dev/" />
@@ -26,7 +24,8 @@
     "name": "WVSPEC Precision Technology",
     "url": "https://wvspec.com",
     "logo": "assets/logo.png",
-    "slogan": "We Challenge Therefore We Are"
+    "foundingDate": "2021-11",
+    "slogan": "Improving Your Metrology System"
   }
   </script>
 </head>
@@ -40,10 +39,12 @@
       </div>
       <nav class="enterprise-nav">
         <ul class="nav-menu">
-          <li><button class="nav-btn active" data-view="home">Home</button></li>
-          <li><button class="nav-btn" data-view="solutions">Solutions</button></li>
-          <li><button class="nav-btn" data-view="technology">Technology</button></li>
-          <li><button class="nav-btn" data-view="contact">Contact</button></li>
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#solutions" class="nav-link">Solutions</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#equipment" class="nav-link">Equipment</a></li>
+          <li><a href="#technology" class="nav-link">Technology</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
       <div class="header-actions">
@@ -52,205 +53,181 @@
     </div>
   </header>
 
-  <!-- Viewport Content (SPA) -->
-  <main class="view-viewer" id="main-view-container">
+  <main id="main-content">
     
-    <!-- View: Home -->
-    <section class="view active" id="view-home">
-      <div class="hero-minimal">
-        <div class="hero-content">
-          <span class="view-tag">Precision Optical Metrology</span>
-          <h1 class="hero-slogan">Introducing WVSPEC Precision<br/><span class="accent">Improving Your Metrology System</span></h1>
-          <div class="hero-intro-box">
-            <p class="hero-intro">
-              WVSPEC Precision is a company composed of senior optics researchers. We respect and admire the great theoretical foundation left over the past century, and believe that the problems encountered will be solved as long as we apply the theory and model well.
-            </p>
-            <p class="hero-detail">WVSPEC Precision is the enabler of optical systems to deliver better and better service as customers' expect. In the face of rapid changing of requirements from end users, we continue to optimize the data process algorithms to improve the performance of crucial modules.</p>
+    <!-- Section: Hero -->
+    <section id="home" class="hero-section">
+      <div class="hero-container">
+        <div class="hero-text">
+          <span class="view-tag">Founded 11/2021 | Precision Technology</span>
+          <h1 class="hero-slogan">Improving Your<br/><span class="accent">Metrology System</span></h1>
+          <p class="hero-description">
+            WVSPEC Precision delivers total optical solutions for thin film measurement and surface profiling. We enable nanometer-scale accuracy for semiconductor and electronics manufacturing.
+          </p>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-value">4+</span>
+              <span class="stat-label">Years of Innovation</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">Sub-nm</span>
+              <span class="stat-label">Resolution Accuracy</span>
+            </div>
           </div>
           <div class="hero-actions">
-            <button class="btn-primary" onclick="app.switchView('solutions')">Explore Solutions</button>
-            <button class="btn-outline" onclick="app.switchView('contact')">Partner with Us</button>
+            <a href="#contact" class="btn-primary">Book a Consultation</a>
+            <a href="#solutions" class="btn-outline">Explore Solutions</a>
           </div>
         </div>
-        <div class="hero-feature-img">
-          <div class="img-frame">
-            <img src="assets/hero_bg.jpg" alt="Precision Metrology Background" />
-            <div class="img-overlay"></div>
+        <div class="hero-visual">
+          <img src="assets/hero_bg.jpg" alt="Precision Metrology Background" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Trust Bar -->
+    <section class="trust-bar">
+      <div class="container">
+        <p class="trust-label">Trusted by industry leaders in Semiconductors & Photovoltaics</p>
+        <div class="trust-logos">
+          <!-- Logo placeholders -->
+          <div class="trust-logo">Semiconductor Lab</div>
+          <div class="trust-logo">Electronics OEM</div>
+          <div class="trust-logo">Optics R&D</div>
+          <div class="trust-logo">PV Manufacturer</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Solutions -->
+    <section id="solutions" class="solutions-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="view-tag">Capabilities</span>
+          <h2 class="section-title">Core Optical Solutions</h2>
+        </div>
+        <div class="solutions-grid">
+          <div class="solution-card">
+            <div class="sol-img"><img src="assets/surface_3d.jpg" alt="Surface Profile" /></div>
+            <h3>Surface Profile</h3>
+            <p>Sub-nanometer resolution off-axis interference measurement for highly polished materials.</p>
+          </div>
+          <div class="solution-card">
+            <div class="sol-img"><img src="assets/film_diagram.png" alt="Film Thickness" /></div>
+            <h3>Film Thickness</h3>
+            <p>Spectral reflectance solutions for transparent and matted thin film inline measurement.</p>
+          </div>
+          <div class="solution-card">
+            <div class="sol-img"><img src="assets/material_chart.png" alt="Analytic Material" /></div>
+            <h3>Analytic Material</h3>
+            <p>Qualitative and quantitative analysis using spectroscopy and deep learning platforms.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- View: Solutions -->
-    <section class="view" id="view-solutions">
-      <div class="solutions-layout">
-
-        <!-- Banner -->
-        <div class="sol-banner">
-          <img src="assets/hero_bg.jpg" alt="WVSPEC Solutions" style="object-position:center 30%;" />
+    <!-- Section: Services (NEW) -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <div class="section-header center">
+          <span class="view-tag">Business Model</span>
+          <h2 class="section-title">Comprehensive Service Ecosystem</h2>
         </div>
-
-        <!-- Intro -->
-        <div class="sol-intro">
-          <span class="view-tag">Core Capabilities</span>
-          <h2 class="view-title">Our Solutions</h2>
-          <p class="section-sub">Experts of WVSPEC Precision Technology work on instruments and algorithms development of surface profile, transparent film thickness, and the analytic absorption/matted materials for more than 10 years.</p>
+        <div class="services-grid">
+          <div class="service-item">
+            <div class="service-icon">🔬</div>
+            <h4>Measurement-as-a-Service</h4>
+            <p>Expert measurement of wafers and thin films using our high-precision optical systems.</p>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">💡</div>
+            <h4>Solution Consulting</h4>
+            <p>Custom optical solution design and technology transfer for specific industrial needs.</p>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">🤝</div>
+            <h4>Technology Transfer</h4>
+            <p>Full technology handovers and process optimization for your internal manufacturing lines.</p>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">📦</div>
+            <h4>Module & Equipment Sales</h4>
+            <p>Supplying high-accuracy optic lenses and individual measurement modules.</p>
+          </div>
         </div>
-
-        <!-- Solution Sections -->
-        <div class="sol-sections">
-
-          <!-- 01 Surface Profile -->
-          <div class="sol-section">
-            <div class="sol-section-text">
-              <h3>Surface Profile</h3>
-              <p>We focus on surface analysis of the finest roughness from 1 nm to tens nm. Our algorithm deals with the off-axis interference data to sub-nano resolution. With optical profiling technology, no-contact, accurate and real-time surface measurement on highly polished material is achieved.</p>
-              <a href="#" class="sol-link" onclick="app.showSurfaceDetail(); return false;">View More ›</a>
-            </div>
-            <div class="sol-section-imgs">
-              <div class="sol-carousel" data-carousel="surface">
-                <div class="sol-carousel-track">
-                  <div class="sol-carousel-slide"><img src="assets/surface_3d.jpg" alt="Surface Profile — 3D topography map" /></div>
-                </div>
-                <button class="sol-arrow prev" aria-label="Previous image">&#8592;</button>
-                <button class="sol-arrow next" aria-label="Next image">&#8594;</button>
-                <div class="sol-dots"></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 02 Transparent Film Thickness -->
-          <div class="sol-section reverse">
-            <div class="sol-section-text">
-              <h3>Transparent Film Thickness</h3>
-              <p>We take advantage of spectral reflectance to help customers to control their manufacturing process. Based on plenty industrial experience, we provide consultancy service to choose the most propriate solution for <a href="#" onclick="return false;" style="color:var(--color-cyan);text-decoration:none;">transparent</a> and <a href="#" onclick="return false;" style="color:#8b5cf6;text-decoration:none;">matted</a> thin film inline measurement.</p>
-              <a href="#" class="sol-link" onclick="app.showFilmDetail(); return false;">View More ›</a>
-            </div>
-            <div class="sol-section-imgs">
-              <div class="sol-carousel" data-carousel="film">
-                <div class="sol-carousel-track">
-                  <div class="sol-carousel-slide"><img src="assets/film_diagram.png" alt="Film Thickness — measurement diagram" /></div>
-                  <div class="sol-carousel-slide"><img src="assets/avg_thickness_wafer.png" alt="Film Thickness — wafer thickness map" /></div>
-                  <div class="sol-carousel-slide"><img src="assets/thickness_range_3d.jpg" alt="Film Thickness — 3D thickness range" /></div>
-                </div>
-                <button class="sol-arrow prev" aria-label="Previous image">&#8592;</button>
-                <button class="sol-arrow next" aria-label="Next image">&#8594;</button>
-                <div class="sol-dots"></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 03 Analytic Material -->
-          <div class="sol-section">
-            <div class="sol-section-text">
-              <h3>Analytic Material</h3>
-              <p>By spectroscopy, we could perform qualitative and quantitative analysis of target materials, especially for absorption/matted materials. We also use deep learning technology to build inference platform for specific applications (e.g. outer/inner properties, defect, tomography) from our customers.</p>
-              <a href="#" class="sol-link" onclick="app.showAnalyticDetail(); return false;">View More ›</a>
-            </div>
-            <div class="sol-section-imgs">
-              <div class="sol-carousel" data-carousel="analytic">
-                <div class="sol-carousel-track">
-                  <div class="sol-carousel-slide"><img src="assets/heat_map.jpg" alt="Analytic Material — surface heat map" /></div>
-                  <div class="sol-carousel-slide"><img src="assets/material_chart.png" alt="Analytic Material — spectral analysis chart" /></div>
-                </div>
-                <button class="sol-arrow prev" aria-label="Previous image">&#8592;</button>
-                <button class="sol-arrow next" aria-label="Next image">&#8594;</button>
-                <div class="sol-dots"></div>
-              </div>
-            </div>
-          </div>
-
-        </div><!-- /sol-sections -->
       </div>
     </section>
 
-    <!-- View: Technology -->
-    <section class="view" id="view-technology">
-      <div class="tech-layout-pro">
-        <div class="tech-header-dual">
-          <div class="tech-header-text">
-            <span class="view-tag">System & Logic</span>
-            <h2 class="view-title">Our Technology</h2>
-            <p>Smart solutions are at the core of all that we do at WVSPEC Precision Technology. Our main goal is finding smart ways of using technology that will help build a better tomorrow for everyone, everywhere. Click <strong>Solutions</strong> page to learn more about the technology, or get in touch to set up a meeting with one of our representatives.</p>
-          </div>
+    <!-- Section: Equipment (NEW) -->
+    <section id="equipment" class="equipment-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="view-tag">Showcase</span>
+          <h2 class="section-title">High-Accuracy Systems</h2>
         </div>
-        
-        <div class="tech-main-grid">
-          <!-- Hardware/System Modules -->
-          <div class="tech-column">
-            <h4 class="sub-column-title">System Architecture</h4>
-            <div class="tech-tabs-vertical">
-              <button class="tech-v-tab active" data-tech="surface_profile" data-cat="system">
-                <strong>Surface Profile</strong>
-                <span>Sub-Nanometer Off-Axis Interferometry</span>
-              </button>
-              <button class="tech-v-tab" data-tech="film_dm1" data-cat="system">
-                <strong>Film Thickness — DM Setup</strong>
-                <span>Inline Spectral Reflectance</span>
-              </button>
-              <button class="tech-v-tab" data-tech="film_dm2" data-cat="system">
-                <strong>Film Thickness — Full Map</strong>
-                <span>Wafer-level Thickness Distribution</span>
-              </button>
+        <div class="equipment-catalog">
+          <div class="catalog-item">
+            <div class="catalog-info">
+              <h3>Precision Optical Modules</h3>
+              <p>High-accuracy optic lenses and standalone modules designed for seamless integration into existing metrology systems. Delivering industry-leading spectral acquisition and measurement stability.</p>
+              <ul class="catalog-features">
+                <li>Sub-nanometer precision</li>
+                <li>Customizable focal lengths</li>
+                <li>Seamless integration</li>
+              </ul>
+              <a href="#contact" class="btn-outline">Request Spec Sheet</a>
             </div>
-            <div class="tech-display-frame">
-              <img src="assets/surface_3d.jpg" id="tech-system-display" alt="Hardware Display" />
-            </div>
-          </div>
-
-          <!-- Result/Analysis Analytics -->
-          <div class="tech-column">
-            <h4 class="sub-column-title">Result Analytics</h4>
-            <div class="tech-tabs-vertical">
-              <button class="tech-v-tab active" data-tech="avg_thickness" data-cat="analysis">
-                <strong>Wafer Mapping</strong>
-                <span>Film Thickness Visualization</span>
-              </button>
-              <button class="tech-v-tab" data-tech="heat_map" data-cat="analysis">
-                <strong>Surface Heatmap</strong>
-                <span>3D Profile Non-uniformity</span>
-              </button>
-              <button class="tech-v-tab" data-tech="analytic_material" data-cat="analysis">
-                <strong>Analytic Material</strong>
-                <span>Deep Learning Inference Platform</span>
-              </button>
-            </div>
-            <div class="tech-display-frame analysis">
-              <img src="assets/avg_thickness_wafer.png" id="tech-analysis-display" alt="Analytics Display" />
+            <div class="catalog-visual">
+              <img src="assets/module_1.jpg" alt="WVSPEC Module" />
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- View: Contact -->
-    <section class="view" id="view-contact">
-      <div class="contact-layout">
-        <div class="contact-header">
-          <span class="view-tag">Collaborate</span>
-          <h2 class="view-title">Get in Touch</h2>
-          <p>Get in touch to set up a meeting with one of our technical representatives for a custom solution to your precision measurement challenges.</p>
-        </div>
-        <div class="contact-container">
-          <div class="contact-info-panel">
-            <div class="contact-card">
-              <h4>Direct Channel</h4>
-              <p>For urgent technical support or complex requirement analysis:</p>
-              <a href="mailto:msu@wvspec.com" class="contact-link">msu@wvspec.com</a>
-            </div>
-            <div class="contact-status-box">
-              <span class="status-indicator"></span>
-              <span>Available for Technical Consultations (GMT+8).</span>
+    <!-- Section: Technology -->
+    <section id="technology" class="technology-section">
+      <div class="container">
+        <div class="tech-layout">
+          <div class="tech-content">
+            <span class="view-tag">Technology Detail</span>
+            <h2 class="section-title">Engineered for Precision</h2>
+            <p>Our experts focus on instruments and algorithms development for surface profiles and thin film thickness for over 10 years. We combine theoretical optics foundations with modern deep learning for superior results.</p>
+            <div class="tech-tabs">
+              <button class="tech-tab active" data-tech="interferometry">Off-Axis Interferometry</button>
+              <button class="tech-tab" data-tech="reflectance">Spectral Reflectance</button>
+              <button class="tech-tab" data-tech="ai">Deep Learning Platform</button>
             </div>
           </div>
-          <div class="contact-form-panel">
-            <form id="pro-contact-form" class="clean-form">
-              <div class="form-row">
-                <input type="text" name="name" placeholder="Full Name" required />
-                <input type="email" name="email" placeholder="Business Email" required />
+          <div class="tech-display">
+            <img id="tech-image" src="assets/surface_3d.jpg" alt="Technology Display" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Contact -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-card-pro">
+          <div class="contact-text">
+            <h2>Ready to improve your metrology?</h2>
+            <p>Our technical team is ready to discuss your specific measurement challenges and design a custom solution for your production line.</p>
+            <div class="contact-info">
+              <div class="info-item">
+                <strong>Email:</strong> <a href="mailto:msu@wvspec.com">msu@wvspec.com</a>
               </div>
-              <textarea name="message" rows="5" placeholder="Could you describe your measurement challenges or project requirements?" required></textarea>
-              <button type="submit" class="btn-submit-pro">Submit Inquiry</button>
+              <div class="info-item">
+                <strong>Location:</strong> Available for Technical Consultations (GMT+8)
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="pro-contact-form">
+              <input type="text" name="name" placeholder="Full Name" required />
+              <input type="email" name="email" placeholder="Business Email" required />
+              <textarea name="message" placeholder="Describe your measurement challenges..." required></textarea>
+              <button type="submit" class="btn-primary">Submit Inquiry</button>
             </form>
           </div>
         </div>
@@ -259,137 +236,29 @@
 
   </main>
 
-  <!-- Sticky Feedback Area -->
-  <aside class="sticky-cta">
-    <div id="chat-window" class="chat-window">
-      <div class="chat-header">
-        <div class="chat-status"></div>
-        <span>WVSPEC Technical Support</span>
-        <button id="close-chat">×</button>
-      </div>
-      <div class="chat-body" id="chat-messages">
-        <div class="chat-msg bot">How can we assist with your precision metrology needs?</div>
-      </div>
-      <div class="chat-footer">
-        <input type="text" id="chat-input" placeholder="Type a message..." />
-        <button id="send-chat">Send</button>
-      </div>
-    </div>
-    <button class="btn-chat-toggle" id="fab-chat" title="Chat with us">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-    </button>
-  </aside>
-
-  <!-- Quick Inquiry Flyout -->
-  <div id="inquiry-flyout" class="flyout">
-    <div class="flyout-header">
-      <h3>Quick Contact</h3>
-      <button id="close-flyout">×</button>
-    </div>
-    <div class="flyout-body">
-      <p>Need a fast technical answer?</p>
-      <input type="email" id="quick-email" placeholder="Email Address" />
-      <button id="quick-submit">Send Message</button>
-    </div>
-  </div>
-
-  <!-- Detail Modal: Surface Profile -->
-  <div id="modal-surface" class="detail-modal" onclick="if(event.target===this)this.classList.remove('open')">
-    <div class="detail-modal-inner">
-      <button class="modal-close" onclick="document.getElementById('modal-surface').classList.remove('open')" aria-label="Close">×</button>
-      <h2>Surface Profile</h2>
-      <p class="modal-desc">WVSPEC's optical profiling system measures surface roughness from <strong>1 nm to tens of nm</strong> without contact. Our proprietary off-axis interferometry algorithm achieves sub-nanometer resolution, enabling real-time inline inspection of highly polished surfaces critical to semiconductor and electronics manufacturing.</p>
-      <div class="modal-feature-list">
-        <div class="modal-feature"><span class="mf-icon">&#9679;</span>Sub-nm lateral resolution via off-axis interferometry</div>
-        <div class="modal-feature"><span class="mf-icon">&#9679;</span>Non-contact, high-speed — suitable for inline production</div>
-        <div class="modal-feature"><span class="mf-icon">&#9679;</span>Works on mirror-polished, chemically treated and structured surfaces</div>
-      </div>
-      <div class="modal-imgs two-col">
-        <figure>
-          <img src="assets/surface_3d.jpg" alt="Surface Profile — 3D topography visualization" />
-          <figcaption>3D surface topography map</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/heat_map.jpg" alt="Surface Profile — heat map analysis" />
-          <figcaption>Surface roughness heat map</figcaption>
-        </figure>
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="WVSPEC Logo" class="footer-logo" />
+          <p>Improving Your Metrology System. Precision Engineering since 2021.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#technology">Technology</a></li>
+          </ul>
+        </div>
+        <div class="footer-legal">
+          <h4>Legal</h4>
+          <p>&copy; 2026 WVSPEC Precision Technology. All rights reserved.</p>
+        </div>
       </div>
     </div>
-  </div>
-
-  <!-- Detail Modal: Film Thickness -->
-  <div id="modal-film" class="detail-modal" onclick="if(event.target===this)this.classList.remove('open')">
-    <div class="detail-modal-inner">
-      <button class="modal-close" onclick="document.getElementById('modal-film').classList.remove('open')" aria-label="Close">×</button>
-      <h2>Transparent Film Thickness</h2>
-      <p class="modal-desc">Using <strong>spectral reflectance</strong>, our system measures transparent and matted thin film thickness inline — from single-layer dielectrics to complex multi-layer stacks. We consult to choose the right sensor and algorithm for your process.</p>
-      <div class="modal-feature-list">
-        <div class="modal-feature"><span class="mf-icon">&#9679;</span>Spectral reflectance — broadband or single-wavelength modes</div>
-        <div class="modal-feature"><span class="mf-icon">&#9679;</span>Single &amp; multi-layer transparent / matted films</div>
-        <div class="modal-feature"><span class="mf-icon">&#9679;</span>Inline &amp; offline measurement; wafer-level mapping</div>
-        <div class="modal-feature"><span class="mf-icon">&#9679;</span>Process control integration (SPC / FDC compatible)</div>
-      </div>
-      <div class="modal-imgs two-col">
-        <figure>
-          <img src="assets/film_diagram.png" alt="Film Thickness — measurement diagram" />
-          <figcaption>Spectral reflectance measurement diagram</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/avg_thickness_wafer.png" alt="Film Thickness — wafer thickness map" />
-          <figcaption>Full wafer thickness distribution map</figcaption>
-        </figure>
-      </div>
-      <div class="modal-imgs two-col" style="margin-top:16px">
-        <figure>
-          <img src="assets/avg_thickness_wafer.png" alt="Film Thickness — average thickness wafer map" />
-          <figcaption>Average thickness wafer map</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/wafer_bumping_3d.jpg" alt="Film Thickness — 3D wafer bumping profile" />
-          <figcaption>3D wafer bumping profile</figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-
-  <!-- Detail Modal: Analytic Material -->
-  <div id="modal-analytic" class="detail-modal" onclick="if(event.target===this)this.classList.remove('open')">
-    <div class="detail-modal-inner">
-      <button class="modal-close" onclick="document.getElementById('modal-analytic').classList.remove('open')" aria-label="Close">×</button>
-      <h2>Analytic Material</h2>
-      <p class="modal-desc">Combining <strong>spectroscopy</strong> with <strong>deep learning</strong>, our inference platform provides qualitative and quantitative material analysis for absorption/matted materials. Custom models are built for defect detection, tomography, and outer/inner property characterisation.</p>
-      <div class="modal-feature-list">
-        <div class="modal-feature"><span class="mf-icon">&#9679;</span>Qualitative &amp; quantitative spectral analysis</div>
-        <div class="modal-feature"><span class="mf-icon">&#9679;</span>Deep learning inference — defect, tomography, properties</div>
-        <div class="modal-feature"><span class="mf-icon">&#9679;</span>Custom model development for specific applications</div>
-        <div class="modal-feature"><span class="mf-icon">&#9679;</span>Supports absorption and matted material types</div>
-      </div>
-      <div class="modal-imgs three-col">
-        <figure>
-          <img src="assets/module_1.jpg" alt="Analytic Material — system module 1" />
-          <figcaption>Spectral acquisition module</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/module_2.jpg" alt="Analytic Material — system module 2" />
-          <figcaption>Inline measurement module</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/module_3.png" alt="Analytic Material — system module 3" />
-          <figcaption>Deep learning inference module</figcaption>
-        </figure>
-      </div>
-      <div class="modal-imgs two-col" style="margin-top:16px">
-        <figure>
-          <img src="assets/heat_map.jpg" alt="Analytic Material — surface heat map" />
-          <figcaption>Surface heat map analysis</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/material_chart.png" alt="Analytic Material — spectral analysis chart" />
-          <figcaption>Spectral analysis chart</figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
+  </footer>
 
   <script src="app.js"></script>
 </body>
