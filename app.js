@@ -110,7 +110,11 @@ const app = (() => {
         });
     };
 
-    // ---- FORM HANDLING ----
+    // ---- FORM HANDLING (Formspree — no server required) ----
+    // FORMSPREE_ENDPOINT: Replace with your Formspree form ID after signing up at formspree.io
+    // e.g. 'https://formspree.io/f/YOUR_FORM_ID'
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xwpbpkgj';
+
     const setupForms = () => {
         const contactForm = document.getElementById('pro-contact-form');
         if (!contactForm) return;
@@ -118,31 +122,25 @@ const app = (() => {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const submitBtn = contactForm.querySelector('button');
-            const data = Object.fromEntries(new FormData(contactForm).entries());
 
             submitBtn.disabled = true;
             submitBtn.textContent = 'TRANSMITTING INQUIRY...';
 
             try {
-                const response = await fetch('/api/contact', {
+                const response = await fetch(FORMSPREE_ENDPOINT, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        name: data.name,
-                        email: data.email,
-                        message: data.message
-                    })
+                    headers: { 'Accept': 'application/json' },
+                    body: new FormData(contactForm)
                 });
 
                 if (response.ok) {
-                    showUINotification('Success: Inquiry Received. Our engineering team will review.', 'success');
+                    showUINotification('Inquiry Received. Our engineering team will reach out shortly.', 'success');
                     contactForm.reset();
                 } else {
-                    throw new Error('Server issues');
+                    throw new Error('Submission failed');
                 }
             } catch (err) {
-                showUINotification('Inquiry Received. Verification pending.', 'info');
-                contactForm.reset();
+                showUINotification('Network error. Please email us directly at msu@wvspec.com', 'info');
             } finally {
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Submit Inquiry';
